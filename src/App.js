@@ -1,6 +1,6 @@
 import './reset.css';
 import './App.css';
-import Info from './components/Info';
+import Select from './components/Select';
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         モンハン弱点教えてくれるくん
       </header>
-      <Info />
+      <Select />
     </div>
   );
 }
