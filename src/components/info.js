@@ -1,6 +1,6 @@
 import React from 'react';
 
-function info(){
+function Info(){
     return (
         <div className = "select">
             <h2>モンスターをえらんでね</h2>
@@ -13,4 +13,4 @@ function info(){
     );
 }
 
-export default info;
+export default Info;
