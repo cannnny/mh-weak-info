@@ -1,6 +1,7 @@
 import './reset.css';
 import './App.css';
 import Select from './components/Select';
+import Result from './components/Result';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         モンハン弱点教えてくれるくん
       </header>
       <Select />
+      <Result />
     </div>
   );
 }
