@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Result(){
+const Result = () => {
     return (
         <div>
             <h2>弱点は…</h2>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Select(){
+const Select = () => {
     return (
         <div className = "select">
             <h2>モンスターをえらんでね</h2>
