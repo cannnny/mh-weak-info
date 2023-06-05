@@ -1,6 +1,7 @@
 import {useState} from 'react';
 
 const Select = () => {
+    // 選択肢を用意
     const monstersData = [
         {
             name: 'リオレウス',
@@ -8,7 +9,7 @@ const Select = () => {
         },
         {
             name: 'リオレイア',
-            weakPoint: '龍'
+            weakPoint: '雷'
         },
         {
             name: 'マガイマガド',
@@ -16,31 +17,37 @@ const Select = () => {
         },
     ];
 
-    const [selectedOption, setSelectedOption] = useState('');
+    // 選択されたものを入れる変数とセット変数を用意、初期値は空
+    const [selectedIndex, setSelectedIndex] = useState(0);
 
+    // 選択されたものをsetselectedIndexに入れる
     const handleOptionChange = (event) => {
-        setSelectedOption(event.target.value)
+        setSelectedIndex(event.target.value);
     };
 
     return (
         <div>
-            <h1 className="title">モンハン弱点教えてくれるくん</h1>
+            <h1 className = "title">モンハン弱点教えてくれるくん</h1>
             <h2>モンスターをえらんでね</h2>
+            {/* プルダウンを表示 */}
             <select className = "selectMenu"
-                    value = {selectedOption}
-                    onChange = {handleOptionChange}
+                    onChange = {handleOptionChange}        
             >
-                <option value = ''>--- 選択 ---</option>
-                {monstersData.map((monster,i)=>{
+                {monstersData.map((monster, index)=>{
                     return (
-                        <option key={i}
-                                value = {monster.name}>{monster.name}
+                        <option key={index}
+                                value = {index}>{monster.name}
                         </option>
-                    )
+                    );
                 })}
             </select>
+
+            {/* 選択されたものに紐づく弱点を表示 */}
+            <h2>弱点は…</h2>
+            <div className = "result">{monstersData[selectedIndex].weakPoint}</div>
         </div>
     );
+
 }
 
 export default Select;
