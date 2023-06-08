@@ -1,34 +1,43 @@
-.app {
-  width: 320px;
-  margin-right: auto;
-  margin-left: auto;
+.title {
+  padding: 10px 5px;
+  border: 2px solid #cccccc;
+  font-size: 20px;
+}
 
-  .title {
-    padding: 10px 5px;
-    border: 2px solid #cccccc;
-    font-size: 20px;
-  }
+h2 {
+  padding-top: 30px;
+  padding-left: 40px;
+  font-size: 16px;
+}
 
+.selectMenu {
+  margin-top: 5px;
+  margin-left: 40px;
+  padding: 3px 28px;
+  text-align: center;
+}
+
+.result {
+  width: 174px;
+  margin-top: 5px;
+  margin-left: 40px;
+  padding-right: 28px;
+  padding-left: 28px;
+  border: 1px solid #666;
+  text-align: center;
+}
+
+
+@media (min-width: 768px) {
   h2 {
-    padding-top: 30px;
-    padding-left: 20px;
-    font-size: 16px;
+    margin-left: 60px;
   }
 
   .selectMenu {
-    margin-top: 5px;
-    margin-left: 20px;
-    padding: 3px 28px;
-    text-align: center;
+    margin-left: 100px;
   }
 
   .result {
-    width: 174px;
-    margin-top: 5px;
-    margin-left: 20px;
-    padding-right: 28px;
-    padding-left: 28px;
-    border: 1px solid #666;
-    text-align: center;
+    margin-left: 100px;
   }
 }
