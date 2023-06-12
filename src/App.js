@@ -1,29 +1,29 @@
-import './reset.css';
-import './App.scss';
-import { useState } from 'react';
+import "./reset.css";
+import "./App.scss";
+import { useState } from "react";
 
 function App() {
   // 選択肢を用意
   const monstersData = [
     {
-      name: 'リオレウス',
-      weakPoint: '龍'
+      name: "リオレウス",
+      weakPoint: "龍",
     },
     {
-      name: 'リオレイア',
-      weakPoint: '雷'
+      name: "リオレイア",
+      weakPoint: "雷",
     },
     {
-      name: 'マガイマガド',
-      weakPoint: '水'
+      name: "マガイマガド",
+      weakPoint: "水",
     },
   ];
 
   // 選択されたものを入れる変数とセット変数を用意、初期値は空
   const [selectedIndex, setSelectedIndex] = useState(0);
 
-  // 選択されたものをsetselectedIndexに入れる
-  const handleOptionChange = (event) => {
+  // 選択されたものselectedIndexに入れる
+  const selectMonster = (event) => {
     setSelectedIndex(event.target.value);
   };
 
@@ -31,14 +31,12 @@ function App() {
     <div className="app">
       <h1 className="title">モンハン弱点教えてくれるくん</h1>
       <h2>モンスターをえらんでね</h2>
-      {/* プルダウンを表示 */}
-      <select className="selectMenu"
-        onChange={handleOptionChange}
-      >
+      {/* セレクトボックスを表示 */}
+      <select className="selectMenu" onChange={selectMonster}>
         {monstersData.map((monster, index) => {
           return (
-            <option key={index}
-              value={index}>{monster.name}
+            <option key={index} value={index}>
+              {monster.name}
             </option>
           );
         })}
