@@ -29,22 +29,26 @@ function App() {
 
   return (
     <div className="app">
-      <h1 className="title">モンハン弱点教えてくれるくん</h1>
-      <h2>モンスターをえらんでね</h2>
-      {/* セレクトボックスを表示 */}
-      <select className="selectMenu" onChange={selectMonster}>
-        {monstersData.map((monster, index) => {
-          return (
-            <option key={index} value={index}>
-              {monster.name}
-            </option>
-          );
-        })}
-      </select>
+      <header>
+        <h1 className="title">モンハン弱点教えてくれるくん</h1>
+      </header>
+      <div className="container">
+        <h2>モンスターをえらんでね</h2>
+        {/* セレクトボックスを表示 */}
+        <select className="selectMenu" onChange={selectMonster}>
+          {monstersData.map((monster, index) => {
+            return (
+              <option key={index} value={index}>
+                {monster.name}
+              </option>
+            );
+          })}
+        </select>
 
-      {/* 選択されたものに紐づく弱点を表示 */}
-      <h2>弱点は…</h2>
-      <div className="result">{monstersData[selectedIndex].weakPoint}</div>
+        {/* 選択されたものに紐づく弱点を表示 */}
+        <h2>弱点は…</h2>
+        <div className="result">{monstersData[selectedIndex].weakPoint}</div>
+      </div>
     </div>
   );
 }
