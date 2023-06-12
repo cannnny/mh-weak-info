@@ -30,7 +30,9 @@ function App() {
   return (
     <div className="app">
       <header>
-        <h1 className="title">モンハン弱点教えてくれるくん</h1>
+        <div className="container">
+          <h1 className="title">モンハン弱点教えてくれるくん</h1>
+        </div>
       </header>
       <div className="container">
         <h2>モンスターをえらんでね</h2>
