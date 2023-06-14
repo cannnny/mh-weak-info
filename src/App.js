@@ -1,23 +1,13 @@
 import "./reset.css";
 import "./App.scss";
 import { useState } from "react";
+import { client } from "./hooks/client";
+
+// 選択肢をmicroCMSから取得
+const getData = await client.get({ endpoint: "monster" });
 
 function App() {
-  // 選択肢を用意
-  const monstersData = [
-    {
-      name: "リオレウス",
-      weakPoint: "龍",
-    },
-    {
-      name: "リオレイア",
-      weakPoint: "雷",
-    },
-    {
-      name: "マガイマガド",
-      weakPoint: "水",
-    },
-  ];
+  const monstersData = getData.contents;
 
   // 選択されたものを入れる変数とセット変数を用意、初期値は空
   const [selectedIndex, setSelectedIndex] = useState(0);
