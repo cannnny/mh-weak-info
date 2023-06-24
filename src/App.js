@@ -4,7 +4,10 @@ import { useState } from "react";
 import { client } from "./hooks/client";
 
 // 選択肢をmicroCMSから取得
-const getData = await client.get({ endpoint: "monster" });
+const getData = await client.get({
+  endpoint: "monster",
+  queries: { limit: 99, orders: "publishedAt" },
+});
 
 function App() {
   const monstersData = getData.contents;
