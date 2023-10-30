@@ -24,7 +24,7 @@ function App() {
     <div className="app">
       <header>
         <div className="container">
-          <h1 className="title">モンハン弱点教えてくれるくん</h1>
+          <h1 className="title">モンハン弱点教えるくん</h1>
         </div>
       </header>
       <div className="container">
